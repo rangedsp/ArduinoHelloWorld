@@ -1,27 +1,27 @@
 'use strict';
-
-var uwp = require("uwp");
-uwp.projectNamespace("Windows");
-
-var appServiceConnection = new Windows.ApplicationModel.AppService.AppServiceConnection();
-
-appServiceConnection.appServiceName = "";
-
-appServiceConnection.packageFamilyName = "";
-
-appServiceConnection.onrequestreceived = onRequestReceived; // this is the function to handle the request received from app service
-
-appServiceConnection.openAsync().done(
-        function () {
-            console.log('connected to app service provider!');
-        });
-
-var message = new Windows.Foundation.Collections.ValueSet();
-message.insert('Message', 'Hello!');   
-appServiceConnection.sendMessageAsync(message).done(
-                        function () {
-                            console.log('Message Sent!');
-                        });
+//
+//var uwp = require("uwp");
+//uwp.projectNamespace("Windows");
+//
+//var appServiceConnection = new Windows.ApplicationModel.AppService.AppServiceConnection();
+//
+//appServiceConnection.appServiceName = "";
+//
+//appServiceConnection.packageFamilyName = "";
+//
+//appServiceConnection.onrequestreceived = onRequestReceived; // this is the function to handle the request received from app service
+//
+//appServiceConnection.openAsync().done(
+//        function () {
+//            console.log('connected to app service provider!');
+//        });
+//
+//var message = new Windows.Foundation.Collections.ValueSet();
+//message.insert('Message', 'Hello!');   
+//appServiceConnection.sendMessageAsync(message).done(
+//                        function () {
+//                            console.log('Message Sent!');
+//                        });
 
 var OWIRobotArm = require('owi-robot-arm');
 

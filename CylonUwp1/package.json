@@ -1,0 +1,23 @@
+{
+  "name": "cylon-uwp1",
+  "version": "0.0.0",
+  "private": true,
+  "main": "app.js",
+  "description": "CylonUwp1",
+  "author": {
+    "name": "Jonny",
+    "email": ""
+  },
+  "dependencies": {
+    "cylon": "~1.1.0",
+    "cylon-firmata": "~0.22.0",
+    "cylon-gpio": "~0.26.0",
+    "cylon-i2c": "~0.22.0",
+    "owi-robot-arm": "0.0.2"
+  },
+  "target_arch": "ARM",
+  "platform": "uwp",
+  "scripts": {
+    "start": "--debug app.js"
+  }
+}
